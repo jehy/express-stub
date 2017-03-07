@@ -25,3 +25,18 @@ git reset --soft origin/master
 git commit -am "Do some awesome stuff that this feature does."
 git push -f
 ```
+
+
+###Качество кода
+
+Для отслеживания качества кода используется ESLint. Для установки используйте:
+
+1. `npm install -g npm-install-peers` - установка глобального модуля, который умеет
+ ставить секции из peerDependencies.
+2. `npm run lint-install`
+3. `npm run lint` 
+
+ESLint хорошо интегрируется с 
+[WebStorm](https://www.jetbrains.com/help/webstorm/2016.3/eslint.html) и
+ [PhpStorm](https://www.jetbrains.com/help/phpstorm/2016.3/eslint.html),
+ настройки должны использоваться из локального файла репозитория `eslintrc.json`.

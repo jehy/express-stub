@@ -6,19 +6,24 @@
     "start": "node app.js",
     "nodemon": "nodemon app.js",
     "lint-install": "npm-install-peers || echo 'Please run `npm install -g npm-install-peers` first'",
-    "lint": "./node_modules/eslint/bin/eslint.js App.js routes modules"
+    "lint": "./node_modules/eslint/bin/eslint.js app.js routes modules",
+    "test": "./node_modules/mocha/bin/mocha --use_strict",
+    "coverage": "node ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha test/test.js"
   },
   "description": "Express JS startup app",
   "main": "app.js",
   "author": "Andrew G Kuznetsov",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "fs-promise": "^2.0.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "nodemon": "^1.9.2"
+    "nodemon": "^1.9.2",
+    "mocha": "^3.2.0",
+    "istanbul": "^0.4.5"
   },
   "peerDependencies": {
     "babel-cli": "^6.23.0",

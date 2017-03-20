@@ -2,3 +2,5 @@ config/default.js
 node_modules
 .DS_Store
 .idea
+coverage
+npm-debug.log

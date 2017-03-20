@@ -1,4 +1,6 @@
 # Пример работы с Express.js
+[![dependencies Status](https://david-dm.org/jehy/express-stub/status.svg)](https://david-dm.org/jehy/express-stub)
+[![devDependencies Status](https://david-dm.org/jehy/express-stub/dev-status.svg)](https://david-dm.org/jehy/express-stub?type=dev)
 
 Никогда не используйте коллбеки. Если нет библиотеки с промисами для необходимых функций - используйе `bluebird` и создайте обертку.
 

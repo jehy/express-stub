@@ -1,13 +1,18 @@
-// Возможность кидать саможельные ошибки - очень полезна для промисов
+// Возможность кидать самодельные ошибки - очень полезна для промисов
 
-module.exports = ()=> {
 
-  function CustomError(name, message, code) {
-    this.name = name;
-    this.message = message || '';
-    this.errorCode = code || 500;
+function CustomError(name, message, code) {
+  Error.captureStackTrace(this, this.constructor);
+  this.name = name;
+  this.message = message || '';
+  if (code === undefined) {
+    this.code = 500;
+  } else {
+    this.code = code;
   }
 
-  CustomError.prototype = Error.prototype;
-  return CustomError;
-};
+}
+
+require('util').inherits(CustomError, Error);
+
+module.exports = CustomError;
